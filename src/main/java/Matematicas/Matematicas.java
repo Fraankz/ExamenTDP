@@ -14,7 +14,7 @@
  * language governing permissions and limitations under the License.
  */
 
-package Examen;
+package Matematicas;
 
 import java.util.Random;
 

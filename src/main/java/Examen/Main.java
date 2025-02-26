@@ -16,6 +16,8 @@
 
 package Examen;
 
+import Matematicas.Matematicas;
+
 import java.util.Scanner;
 
 /**
