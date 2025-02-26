@@ -1,0 +1,42 @@
+@startuml
+
+class Main {
+}
+
+class Tablero {
+  - DIMENSION: int
+  - estadoActual: int[][]
+  - estadoSiguiente: int[][]
+
+  + Tablero()
+  + leerEstadoActual(): void
+  + generarEstadoActualPorMontecarlo(): void
+  + transitarAlEstadoSiguiente(): void
+  - calcularEstadoSiguiente(): void
+  - contarVecinosVivos(int, int): int
+  - copiarMatriz(int[][], int[][]): void
+  + toString(): String
+}
+
+class Camino {
+  - adjacencyList: Map<V, Set<V>>
+
+  + addVertex(V v): boolean
+  + addEdge(V v1, V v2): boolean
+  + obtainAdjacents(V v): Set<V>
+  + containsVertex(V v): boolean
+  + toString(): String
+  + onePath(V v1, V v2): List<V>
+  + reconstructPath(Map<V, V> trace, V start, V end): List<V>
+}
+
+class Matematicas {
+  + generarNumeroPi(long pasos): double
+}
+
+Main --> Tablero
+Main --> Camino
+Main --> Matematicas
+Camino --> Tablero
+
+@enduml
